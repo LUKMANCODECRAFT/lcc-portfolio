@@ -4,11 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lukman CodeCraft | Enterprise Systems Engineer</title>
-
-    <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lukman CodeCraft | Enterprise Systems Engineer</title>
     
     <style>
         /* ==========================================================================
@@ -19,7 +14,7 @@
             color: #94a3b8 !important;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
-            padding: 60px 20px;
+            padding: 40px 20px;
             line-height: 1.6;
         }
 
@@ -28,6 +23,9 @@
             margin: 0 auto;
         }
 
+        /* ==========================================================================
+           EXECUTIVE HEADER STYLING
+           ========================================================================== */
         .hero-section {
             margin-bottom: 40px;
             border-bottom: 1px solid #1e293b;
@@ -68,17 +66,26 @@
             margin: 0;
         }
 
+        /* ==========================================================================
+           DYNAMIC MULTI-COLUMN ENGINEERING LAYOUT
+           ========================================================================== */
         .grid-layout {
             display: grid;
             grid-template-columns: 1.2fr 1fr;
             gap: 45px;
+            margin-bottom: 40px;
         }
 
         @media (max-width: 950px) {
-            .grid-layout { grid-template-columns: 1fr; }
+            .grid-layout {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
         }
 
-        .portfolio-section { margin-bottom: 40px; }
+        .portfolio-section {
+            margin-bottom: 20px;
+        }
 
         h2 {
             color: #f8fafc;
@@ -91,11 +98,9 @@
             padding-left: 12px;
         }
 
-        .section-divider {
-            margin-top: 40px;
-            border-left-color: #10b981;
-        }
-
+        /* ==========================================================================
+           PRODUCTION CASE STUDY CARDS
+           ========================================================================== */
         .project-card {
             background-color: #0b0d14;
             border: 1px solid #1e293b;
@@ -112,7 +117,11 @@
             margin-bottom: 12px;
         }
 
-        .project-card h3 { margin: 0; font-size: 1.2rem; color: #fff; }
+        .project-card h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
 
         .tech-tag {
             font-family: monospace;
@@ -124,12 +133,39 @@
             white-space: nowrap;
         }
 
-        .project-card p { margin: 0 0 20px 0; font-size: 0.95rem; color: #94a3b8; }
-        .link-btn { display: inline-block; color: #3b82f6; text-decoration: none; font-size: 0.9rem; font-weight: 600; }
-        .link-btn:hover { color: #60a5fa; text-decoration: underline; }
+        .project-card p {
+            margin: 0 0 20px 0;
+            font-size: 0.95rem;
+            color: #94a3b8;
+        }
 
-        .certifications-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-        @media (max-width: 550px) { .certifications-grid { grid-template-columns: 1fr; } }
+        .link-btn {
+            display: inline-block;
+            color: #3b82f6;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .link-btn:hover {
+            color: #60a5fa;
+            text-decoration: underline;
+        }
+
+        /* ==========================================================================
+           VERIFIED CERTIFICATIONS MATRIX
+           ========================================================================== */
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        @media (max-width: 550px) {
+            .certifications-grid {
+                grid-template-columns: 1fr;
+            }
+        }
 
         .cert-card {
             background-color: #0b0d14;
@@ -137,12 +173,85 @@
             border-radius: 6px;
             padding: 16px;
             text-decoration: none;
+            transition: border-color 0.15s ease;
         }
 
-        .cert-authority { font-family: monospace; font-size: 0.75rem; color: #10b981; margin-bottom: 6px; font-weight: bold; }
-        .cert-title { color: #f8fafc; font-size: 0.9rem; font-weight: 500; line-height: 1.4; }
+        .cert-card:hover {
+            border-color: #3b82f6;
+        }
 
-        .panel-box { background-color: #0b0d14; border: 1px solid #1e293b; border-radius: 8px; padding: 24px; }
+        .cert-authority {
+            font-family: monospace;
+            font-size: 0.75rem;
+            color: #10b981;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .cert-title {
+            color: #f8fafc;
+            font-size: 0.9rem;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        /* ==========================================================================
+           THE RUNTIME CENTRAL TABS NAVIGATION SYSTEM
+           ========================================================================== */
+        .tabs-header-container {
+            display: flex;
+            border-bottom: 1px solid #1e293b;
+            margin-bottom: 20px;
+            gap: 4px;
+        }
+
+        .control-tab-btn {
+            background-color: #0b0d14;
+            color: #64748b;
+            border: 1px solid #1e293b;
+            border-bottom: none;
+            padding: 12px 16px;
+            font-family: monospace;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            position: relative;
+            top: 1px;
+        }
+
+        .control-tab-btn:hover {
+            color: #cbd5e1;
+            background-color: #111422;
+        }
+
+        .control-tab-btn.active-view-node {
+            color: #3b82f6;
+            background-color: #0b0d14;
+            border-color: #1e293b #1e293b #0b0d14 #1e293b;
+            border-top: 2px solid #3b82f6;
+        }
+
+        .tab-panel-content {
+            display: none; /* Hide content areas by default state */
+        }
+
+        .tab-panel-content.active-view-node {
+            display: block; /* Reveal target content area cleanly */
+        }
+
+        /* ==========================================================================
+           COMPACT WIDGET ELEMENTS INTERNALS
+           ========================================================================== */
+        .panel-box, .contact-box, .review-box {
+            background-color: #0b0d14;
+            border: 1px solid #1e293b;
+            border-radius: 0 0 8px 8px;
+            padding: 24px;
+            border-top: none; /* Merges cleanly into tab headers navigation */
+        }
 
         select {
             width: 100%;
@@ -168,9 +277,30 @@
             font-size: 0.95rem;
         }
 
-        .terminal-container { margin-top: 20px; background-color: #030406; border: 1px solid #1e293b; border-radius: 6px; overflow: hidden; }
-        .terminal-header { background-color: #090a0f; padding: 10px 15px; display: flex; align-items: center; border-bottom: 1px solid #1e293b; }
-        .terminal-header .dot { width: 8px; height: 8px; background-color: #334155; border-radius: 50%; margin-right: 6px; }
+        .terminal-container {
+            margin-top: 20px;
+            background-color: #030406;
+            border: 1px solid #1e293b;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .terminal-header {
+            background-color: #090a0f;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #1e293b;
+        }
+
+        .terminal-header .dot {
+            width: 8px;
+            height: 8px;
+            background-color: #334155;
+            border-radius: 50%;
+            margin-right: 6px;
+        }
+
         .terminal-title { font-family: monospace; font-size: 0.75rem; color: #64748b; margin-left: auto; }
         .terminal-body { padding: 15px; height: 180px; overflow-y: auto; font-family: 'Courier New', Courier, monospace; font-size: 0.85rem; line-height: 1.5; }
 
@@ -178,18 +308,15 @@
         .log-process { color: #3b82f6; }
         .log-success { color: #10b981; }
 
-        .stack-box { background-color: #0b0d14; border: 1px solid #1e293b; border-radius: 8px; padding: 20px; }
-        .stack-category { margin-bottom: 15px; }
-        .stack-category h4 { margin: 0 0 4px 0; color: #f8fafc; font-size: 0.9rem; }
-        .stack-category p { margin: 0; font-size: 0.85rem; color: #94a3b8; font-family: monospace; }
-
-        .contact-box { background-color: #0b0d14; border: 1px solid #1e293b; border-radius: 8px; padding: 20px; }
-        .form-intro { font-size: 0.9rem; color: #94a3b8; margin-bottom: 20px !important; }
+        /* INPUT SETTINGS FOR SYSTEM APPS */
+        .form-intro { font-size: 0.9rem; color: #94a3b8; margin: 0 0 20px 0; }
         .input-field-group { margin-bottom: 16px; }
         .input-field-group label { display: block; font-family: monospace; font-size: 0.75rem; color: #64748b; text-transform: uppercase; margin-bottom: 6px; }
         
         .input-field-group input, 
-        .input-field-group textarea {
+        .input-field-group textarea,
+        .review-input-group input,
+        .review-input-group textarea {
             width: 100%;
             padding: 12px;
             background-color: #06070a;
@@ -197,112 +324,63 @@
             border-radius: 6px;
             color: #fff;
             box-sizing: border-box;
+            font-size: 0.9rem;
         }
 
-        .gateway-submit-btn {
+        .gateway-submit-btn, .review-submit-btn {
             width: 100%; background-color: #10b981; color: #06070a; border: none; padding: 12px;
             font-weight: 700; font-family: monospace; text-transform: uppercase; border-radius: 6px; cursor: pointer;
         }
+        .review-submit-btn { background-color: #3b82f6; color: #fff; }
 
         .payload-monitor { margin-top: 20px; background-color: #030406; border: 1px solid #1e293b; border-radius: 6px; padding: 12px; }
         .monitor-header { font-family: monospace; font-size: 0.7rem; color: #64748b; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #1e293b; padding-bottom: 8px; margin-bottom: 8px; }
         .pulse-indicator { width: 6px; height: 6px; background-color: #3b82f6; border-radius: 50%; display: inline-block; }
         #json-preview { margin: 0; font-family: 'Courier New', Courier, monospace; font-size: 0.8rem; color: #a7f3d0; white-space: pre-wrap; line-height: 1.4; }
-        .status-transmission { color: #f59e0b !important; }
-        .status-success { color: #10b981 !important; }
+        
+        /* REVIEWS RESTRUCTURING */
+        .star-rating-container { display: flex; gap: 8px; font-size: 1.75rem; margin-bottom: 15px; cursor: pointer; }
+        .star-node { color: #1e293b; transition: color 0.15s ease; }
+        .star-node.hovered, .star-node.active { color: #f59e0b; text-shadow: 0 0 8px rgba(245, 158, 11, 0.3); }
+        .active-log-display { margin-top: 15px; padding: 12px; background-color: #030406; border: 1px solid #1e293b; border-radius: 6px; font-family: monospace; font-size: 0.8rem; }
+        .review-card-output { border-left: 2px solid #f59e0b; padding-left: 8px; }
+        .review-meta { color: #f8fafc; font-weight: bold; margin-bottom: 4px; }
+        .review-stars { color: #f59e0b; margin-bottom: 4px; }
+        .review-body { color: #94a3b8; }
 
         /* ==========================================================================
-   CLIENT REVIEW ENGINE DESIGN ARCHITECTURE
-   ========================================================================== */
-.review-box {
-    background-color: #0b0d14;
-    border: 1px solid #1e293b;
-    border-radius: 8px;
-    padding: 20px;
-}
+           WIDE HORIZONTAL TECH STACK GRID FOOTER
+           ========================================================================== */
+        .footer-stack-section {
+            border-top: 1px solid #1e293b;
+            padding-top: 35px;
+            margin-top: 20px;
+        }
 
-.star-rating-container {
-    display: flex;
-    gap: 8px;
-    font-size: 1.75rem;
-    margin-bottom: 15px;
-    cursor: pointer;
-}
+        .stack-horizontal-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
 
-.star-node {
-    color: #1e293b;
-    transition: color 0.15s ease, transform 0.1s ease;
-}
+        @media (max-width: 750px) {
+            .stack-horizontal-grid { grid-template-columns: 1fr; }
+        }
 
-.star-node.hovered,
-.star-node.active {
-    color: #f59e0b; /* Amber star metric */
-    text-shadow: 0 0 8px rgba(245, 158, 11, 0.3);
-}
+        .stack-box {
+            background-color: #0b0d14;
+            border: 1px solid #1e293b;
+            border-radius: 8px;
+            padding: 20px;
+        }
 
-.star-node:active {
-    transform: scale(1.2);
-}
-
-.review-input-group input,
-.review-input-group textarea {
-    width: 100%;
-    padding: 10px;
-    background-color: #06070a;
-    border: 1px solid #1e293b;
-    border-radius: 6px;
-    color: #fff;
-    font-size: 0.85rem;
-    box-sizing: border-box;
-    margin-bottom: 12px;
-}
-
-.review-submit-btn {
-    width: 100%;
-    background-color: #3b82f6;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    font-weight: 600;
-    font-family: monospace;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.15s ease;
-}
-
-.review-submit-btn:hover {
-    background-color: #2563eb;
-}
-
-.active-log-display {
-    margin-top: 15px;
-    padding: 12px;
-    background-color: #030406;
-    border: 1px solid #1e293b;
-    border-radius: 6px;
-    font-family: monospace;
-    font-size: 0.8rem;
-}
-
-.review-card-output {
-    border-left: 2px solid #f59e0b;
-    padding-left: 8px;
-}
-
-.review-meta { color: #f8fafc; font-weight: bold; margin-bottom: 4px; }
-.review-stars { color: #f59e0b; margin-bottom: 4px; }
-.review-body { color: #94a3b8; }
-
+        .stack-box h4 { margin: 0 0 6px 0; color: #f8fafc; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px; }
+        .stack-box p { margin: 0; font-size: 0.85rem; color: #94a3b8; font-family: monospace; }
     </style>
-</head>
-
 </head>
 <body>
 
     <div class="portfolio-container">
-        <!-- GLOBAL EXECUTIVE HEADER -->
         <header class="hero-section">
             <div class="status-badge">● COMPILER ONLINE // ASSIGNED TO ACTIVE PRODUCTION</div>
             <h1>Lukman CodeCraft</h1>
@@ -312,13 +390,9 @@
             </p>
         </header>
 
-        <!-- MASTER DUAL-COLUMN SYSTEM GRID -->
         <div class="grid-layout">
             
-            <!-- LEFT COLUMN: ENGINEERING CASE STUDIES & ACCREDITATIONS -->
             <main class="left-column">
-                
-                <!-- SECTION 1: PRODUCTION ASSETS -->
                 <section class="portfolio-section">
                     <h2>Deployed Production Assets</h2>
 
@@ -356,7 +430,6 @@
                     </div>
                 </section>
 
-                <!-- SECTION 2: TECHNICAL CREDENTIALS -->
                 <section class="portfolio-section">
                     <h2>Verified Engineering Certifications</h2>
                     <div class="certifications-grid">
@@ -380,12 +453,14 @@
                 </section>
             </main>
 
-            <!-- RIGHT COLUMN: LAB SIMULATOR, FULL STACK FLOW & INTERACTIVE GATEWAY -->
             <aside class="right-column">
-                
-                <!-- LAB SYSTEM -->
-                <section class="portfolio-section sticky-panel-wrapper">
-                    <h2>Interactive Architecture Lab</h2>
+                <div class="tabs-header-container">
+                    <button class="control-tab-btn active-view-node" data-target="panel-lab">⚡ Diagnostics Lab</button>
+                    <button class="control-tab-btn" data-target="panel-gateway">📧 Secure Gateway</button>
+                    <button class="control-tab-btn" data-target="panel-reviews">🌟 Client Evaluations</button>
+                </div>
+
+                <div id="panel-lab" class="tab-panel-content active-view-node">
                     <div class="panel-box">
                         <label for="simulation-selector">Select Software Asset to Query:</label>
                         <select id="simulation-selector">
@@ -393,42 +468,22 @@
                             <option value="quoteforge">LCC QuoteForge Pro (Financial Engine)</option>
                             <option value="command">Freelance Command Center (State Storage)</option>
                         </select>
-
                         <button id="run-simulation-btn" class="sim-btn">Execute Production Diagnostics</button>
-
                         <div class="terminal-container">
                             <div class="terminal-header">
                                 <span class="dot"></span><span class="dot"></span><span class="dot"></span>
                                 <span class="terminal-title">system_diagnostics.log</span>
                             </div>
                             <div id="portfolio-terminal" class="terminal-body">
-                                <div class="log-neutral">[SYSTEM] Ready to test internal asset logic components. Choose an architecture target above...</div>
+                                <div class="log-neutral">[SYSTEM] Ready to test internal asset logic components...</div>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- FULL TECH STACK MATRIX -->
-                    <h2 class="section-divider">LCC Infrastructure Core Stack</h2>
-                    <div class="stack-box">
-                        <div class="stack-category">
-                            <h4>Runtime & Languages</h4>
-                            <p>JavaScript (ES6+ Engine Core), Node.js, Python, Express.js</p>
-                        </div>
-                        <div class="stack-category">
-                            <h4>Frontend Architecture</h4>
-                            <p>React.js Framework, Modular CSS3 Architecture, DOM Manipulation</p>
-                        </div>
-                        <div class="stack-category">
-                            <h4>Persistence & Cloud Pipelines</h4>
-                            <p>MongoDB Database Layer, LocalStorage Data Persistence, Git/GitHub Actions Engine</p>
-                        </div>
-                    </div>
-
-                    <!-- INTERACTIVE LIVE GATEWAY FORM -->
-                    <h2 class="section-divider">Secure Connection Gateway</h2>
+                <div id="panel-gateway" class="tab-panel-content">
                     <div class="contact-box">
                         <p class="form-intro">Initiate corporate inquiries or technical evaluations via secure async transmission:</p>
-                        
                         <form id="gateway-form">
                             <div class="input-field-group">
                                 <label for="sender-identity">Corporate Node / Email:</label>
@@ -436,48 +491,58 @@
                             </div>
                             <div class="input-field-group">
                                 <label for="payload-body">Transmission Body / Message:</label>
-                                <textarea id="payload-body" rows="4" placeholder="Describe the engineering scope or role requirements..." required></textarea>
+                                <textarea id="payload-body" rows="4" placeholder="Describe the engineering scope requirements..." required></textarea>
                             </div>
                             <button type="submit" id="submit-payload-btn" class="gateway-submit-btn">Dispatch Payload Data</button>
                         </form>
-
-                        <h2 class="section-divider">Client Evaluation Matrix</h2>
-<div class="review-box">
-    <p class="form-intro">Leave a verified telemetry rating based on production performance:</p>
-    
-    <div class="star-rating-container">
-        <span class="star-node" data-value="1">★</span>
-        <span class="star-node" data-value="2">★</span>
-        <span class="star-node" data-value="3">★</span>
-        <span class="star-node" data-value="4">★</span>
-        <span class="star-node" data-value="5">★</span>
-    </div>
-    
-    <div class="review-input-group">
-        <input type="text" id="reviewer-name" placeholder="Client Name / Organization">
-        <textarea id="review-text" rows="2" placeholder="Leave public feedback or optimization notes..."></textarea>
-        <button id="submit-review-btn" class="review-submit-btn">Commit Review to Cache</button>
-    </div>
-
-    <div id="active-review-log" class="active-log-display">
-        <div class="log-neutral">[CACHE] No local evaluation records found in browser state.</div>
-    </div>
-</div>
-
-                        <!-- REACT-STYLE LIVE VIEW PORTAL -->
                         <div class="payload-monitor">
-                            <div class="monitor-header">
-                                <span class="pulse-indicator"></span> LIVE STAGE STATE PREVIEW (JSON)
-                            </div>
+                            <div class="monitor-header"><span class="pulse-indicator"></span> LIVE STAGE STATE PREVIEW (JSON)</div>
                             <pre id="json-preview">{\n  "sender": "",\n  "message": "",\n  "timestamp": null,\n  "status": "AWAITING_INPUT"\n}</pre>
                         </div>
                     </div>
-                </section>
-            </aside>
-            
-        </div>
-    </div>
+                </div>
 
-    <script src="app.js"></script>
+                <div id="panel-reviews" class="tab-panel-content">
+                    <div class="review-box">
+                        <p class="form-intro">Leave a verified telemetry rating based on production execution metrics:</p>
+                        <div class="star-rating-container">
+                            <span class="star-node" data-value="1">★</span>
+                            <span class="star-node" data-value="2">★</span>
+                            <span class="star-node" data-value="3">★</span>
+                            <span class="star-node" data-value="4">★</span>
+                            <span class="star-node" data-value="5">★</span>
+                        </div>
+                        <div class="review-input-group">
+                            <input type="text" id="reviewer-name" placeholder="Client Name / Organization">
+                            <textarea id="review-text" rows="2" placeholder="Leave public feedback optimization notes..."></textarea>
+                            <button id="submit-review-btn" class="review-submit-btn">Commit Review to Cache</button>
+                        </div>
+                        <div id="active-review-log" class="active-log-display">
+                            <div class="log-neutral">[CACHE] No local evaluation records found in browser state.</div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <footer class="footer-stack-section">
+            <h2>LCC Infrastructure Core Stack Matrix</h2>
+            <div class="stack-horizontal-grid">
+                <div class="stack-box">
+                    <h4>Runtime & Languages</h4>
+                    <p>JavaScript (ES6+ Engine Core), Node.js, Python, Express.js</p>
+                </div>
+                <div class="stack-box">
+                    <h4>Frontend Architecture</h4>
+                    <p>React.js Framework, Modular CSS3 Architecture, DOM Manipulation</p>
+                </div>
+                <div class="stack-box">
+                    <h4>Persistence & Pipelines</h4>
+                    <p>MongoDB Database Layer, LocalStorage Data Persistence, Git/GitHub Actions Engine</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+<script src="app.js"></script>
 </body>
 </html>
