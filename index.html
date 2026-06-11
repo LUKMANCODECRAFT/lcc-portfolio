@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lukman CodeCraft | Enterprise Systems Engineer</title>
+
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lukman CodeCraft | Enterprise Systems Engineer</title>
+    
+    <style>
+        /* ==========================================================================
+           GLOBAL VARIABLES & INDUSTRIAL SYSTEM RESET
+           ========================================================================== */
+        body {
+            background-color: #06070a !important;
+            color: #94a3b8 !important;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 60px 20px;
+            line-height: 1.6;
+        }
+
+        .portfolio-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero-section {
+            margin-bottom: 40px;
+            border-bottom: 1px solid #1e293b;
+            padding-bottom: 35px;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background-color: #0b131f;
+            border: 1px solid #065f46;
+            color: #34d399;
+            font-family: monospace;
+            font-size: 0.75rem;
+            padding: 5px 12px;
+            border-radius: 4px;
+            letter-spacing: 0.5px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            color: #f8fafc !important;
+            font-size: 2.5rem;
+            margin: 0 0 5px 0;
+            letter-spacing: -0.5px;
+        }
+
+        .role-title {
+            color: #3b82f6;
+            font-size: 1.15rem;
+            margin: 0 0 15px 0;
+            font-weight: 500;
+        }
+
+        .bio-text {
+            max-width: 800px;
+            font-size: 1.05rem;
+            color: #cbd5e1;
+            margin: 0;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 45px;
+        }
+
+        @media (max-width: 950px) {
+            .grid-layout { grid-template-columns: 1fr; }
+        }
+
+        .portfolio-section { margin-bottom: 40px; }
+
+        h2 {
+            color: #f8fafc;
+            font-size: 1.2rem;
+            margin-top: 0;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 0.75px;
+            border-left: 3px solid #3b82f6;
+            padding-left: 12px;
+        }
+
+        .section-divider {
+            margin-top: 40px;
+            border-left-color: #10b981;
+        }
+
+        .project-card {
+            background-color: #0b0d14;
+            border: 1px solid #1e293b;
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 12px;
+        }
+
+        .project-card h3 { margin: 0; font-size: 1.2rem; color: #fff; }
+
+        .tech-tag {
+            font-family: monospace;
+            font-size: 0.75rem;
+            background-color: #1e293b;
+            color: #cbd5e1;
+            padding: 4px 10px;
+            border-radius: 4px;
+            white-space: nowrap;
+        }
+
+        .project-card p { margin: 0 0 20px 0; font-size: 0.95rem; color: #94a3b8; }
+        .link-btn { display: inline-block; color: #3b82f6; text-decoration: none; font-size: 0.9rem; font-weight: 600; }
+        .link-btn:hover { color: #60a5fa; text-decoration: underline; }
+
+        .certifications-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        @media (max-width: 550px) { .certifications-grid { grid-template-columns: 1fr; } }
+
+        .cert-card {
+            background-color: #0b0d14;
+            border: 1px solid #1e293b;
+            border-radius: 6px;
+            padding: 16px;
+            text-decoration: none;
+        }
+
+        .cert-authority { font-family: monospace; font-size: 0.75rem; color: #10b981; margin-bottom: 6px; font-weight: bold; }
+        .cert-title { color: #f8fafc; font-size: 0.9rem; font-weight: 500; line-height: 1.4; }
+
+        .panel-box { background-color: #0b0d14; border: 1px solid #1e293b; border-radius: 8px; padding: 24px; }
+
+        select {
+            width: 100%;
+            padding: 12px;
+            background-color: #06070a;
+            border: 1px solid #1e293b;
+            border-radius: 6px;
+            color: #fff;
+            font-size: 0.95rem;
+            margin-top: 8px;
+            margin-bottom: 15px;
+        }
+
+        .sim-btn {
+            width: 100%;
+            background-color: #2563eb;
+            color: #fff;
+            border: none;
+            padding: 12px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+
+        .terminal-container { margin-top: 20px; background-color: #030406; border: 1px solid #1e293b; border-radius: 6px; overflow: hidden; }
+        .terminal-header { background-color: #090a0f; padding: 10px 15px; display: flex; align-items: center; border-bottom: 1px solid #1e293b; }
+        .terminal-header .dot { width: 8px; height: 8px; background-color: #334155; border-radius: 50%; margin-right: 6px; }
+        .terminal-title { font-family: monospace; font-size: 0.75rem; color: #64748b; margin-left: auto; }
+        .terminal-body { padding: 15px; height: 180px; overflow-y: auto; font-family: 'Courier New', Courier, monospace; font-size: 0.85rem; line-height: 1.5; }
+
+        .log-neutral { color: #64748b; }
+        .log-process { color: #3b82f6; }
+        .log-success { color: #10b981; }
+
+        .stack-box { background-color: #0b0d14; border: 1px solid #1e293b; border-radius: 8px; padding: 20px; }
+        .stack-category { margin-bottom: 15px; }
+        .stack-category h4 { margin: 0 0 4px 0; color: #f8fafc; font-size: 0.9rem; }
+        .stack-category p { margin: 0; font-size: 0.85rem; color: #94a3b8; font-family: monospace; }
+
+        .contact-box { background-color: #0b0d14; border: 1px solid #1e293b; border-radius: 8px; padding: 20px; }
+        .form-intro { font-size: 0.9rem; color: #94a3b8; margin-bottom: 20px !important; }
+        .input-field-group { margin-bottom: 16px; }
+        .input-field-group label { display: block; font-family: monospace; font-size: 0.75rem; color: #64748b; text-transform: uppercase; margin-bottom: 6px; }
+        
+        .input-field-group input, 
+        .input-field-group textarea {
+            width: 100%;
+            padding: 12px;
+            background-color: #06070a;
+            border: 1px solid #1e293b;
+            border-radius: 6px;
+            color: #fff;
+            box-sizing: border-box;
+        }
+
+        .gateway-submit-btn {
+            width: 100%; background-color: #10b981; color: #06070a; border: none; padding: 12px;
+            font-weight: 700; font-family: monospace; text-transform: uppercase; border-radius: 6px; cursor: pointer;
+        }
+
+        .payload-monitor { margin-top: 20px; background-color: #030406; border: 1px solid #1e293b; border-radius: 6px; padding: 12px; }
+        .monitor-header { font-family: monospace; font-size: 0.7rem; color: #64748b; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #1e293b; padding-bottom: 8px; margin-bottom: 8px; }
+        .pulse-indicator { width: 6px; height: 6px; background-color: #3b82f6; border-radius: 50%; display: inline-block; }
+        #json-preview { margin: 0; font-family: 'Courier New', Courier, monospace; font-size: 0.8rem; color: #a7f3d0; white-space: pre-wrap; line-height: 1.4; }
+        .status-transmission { color: #f59e0b !important; }
+        .status-success { color: #10b981 !important; }
+    </style>
+</head>
+
+</head>
+<body>
+
+    <div class="portfolio-container">
+        <!-- GLOBAL EXECUTIVE HEADER -->
+        <header class="hero-section">
+            <div class="status-badge">● COMPILER ONLINE // ASSIGNED TO ACTIVE PRODUCTION</div>
+            <h1>Lukman CodeCraft</h1>
+            <p class="role-title">Principal Automation Engineer & Systems Architect</p>
+            <p class="bio-text">
+                I engineer data-persistent web infrastructure, asynchronous network telemetry software, and automated business tools designed to protect revenue margins and scale operational efficiency.
+            </p>
+        </header>
+
+        <!-- MASTER DUAL-COLUMN SYSTEM GRID -->
+        <div class="grid-layout">
+            
+            <!-- LEFT COLUMN: ENGINEERING CASE STUDIES & ACCREDITATIONS -->
+            <main class="left-column">
+                
+                <!-- SECTION 1: PRODUCTION ASSETS -->
+                <section class="portfolio-section">
+                    <h2>Deployed Production Assets</h2>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>🛰️ LCC Performance Shield</h3>
+                            <span class="tech-tag">Asynchronous JS</span>
+                        </div>
+                        <p>An enterprise-grade telemetry dashboard running automated background network polling loops against live production APIs, tracking latency metrics down to the millisecond while bypassing browser caching layers.</p>
+                        <div class="project-actions">
+                            <a href="https://github.com/lukmancodecraft/lcc-performance-shield" target="_blank" class="link-btn">Source Code & Document Matrix →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>🚀 Freelance Command Center</h3>
+                            <span class="tech-tag">React Engine</span>
+                        </div>
+                        <p>A global business management and lead qualification matrix built with data-persistent LocalStorage state architecture, multi-currency valuation layers, and automated client scoring models.</p>
+                        <div class="project-actions">
+                            <a href="https://github.com/lukmancodecraft/freelance-dashboard" target="_blank" class="link-btn">Source Code & Document Matrix →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>🛠️ LCC QuoteForge Pro</h3>
+                            <span class="tech-tag">Modular CSS3</span>
+                        </div>
+                        <p>A professional client scoping application utilizing inverse-percentage math models to calculate project budgets and auto-generate clean contract proposals while securing freelance profit margins.</p>
+                        <div class="project-actions">
+                            <a href="https://github.com/lukmancodecraft/lcc-quoteforge" target="_blank" class="link-btn">Source Code & Document Matrix →</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECTION 2: TECHNICAL CREDENTIALS -->
+                <section class="portfolio-section">
+                    <h2>Verified Engineering Certifications</h2>
+                    <div class="certifications-grid">
+                        <a href="https://www.freecodecamp.org/certification/lukmancodecraft/javascript-v9" target="_blank" class="cert-card">
+                            <div class="cert-authority">freeCodeCamp</div>
+                            <div class="cert-title">JavaScript Algorithms & Data Structures</div>
+                        </a>
+                        <a href="https://www.freecodecamp.org/certification/lukmancodecraft/responsive-web-design-v9" target="_blank" class="cert-card">
+                            <div class="cert-authority">freeCodeCamp</div>
+                            <div class="cert-title">Responsive Web Design Core Architecture</div>
+                        </a>
+                        <a href="https://www.freecodecamp.org/certification/lukmancodecraft/python-v9" target="_blank" class="cert-card">
+                            <div class="cert-authority">freeCodeCamp</div>
+                            <div class="cert-title">Scientific Computing with Python</div>
+                        </a>
+                        <a href="https://www.freecodecamp.org/certification/lukmancodecraft/a2-english-for-developers" target="_blank" class="cert-card">
+                            <div class="cert-authority">freeCodeCamp</div>
+                            <div class="cert-title">English A2 Architecture Standard for Developers</div>
+                        </a>
+                    </div>
+                </section>
+            </main>
+
+            <!-- RIGHT COLUMN: LAB SIMULATOR, FULL STACK FLOW & INTERACTIVE GATEWAY -->
+            <aside class="right-column">
+                
+                <!-- LAB SYSTEM -->
+                <section class="portfolio-section sticky-panel-wrapper">
+                    <h2>Interactive Architecture Lab</h2>
+                    <div class="panel-box">
+                        <label for="simulation-selector">Select Software Asset to Query:</label>
+                        <select id="simulation-selector">
+                            <option value="shield">LCC Performance Shield (Telemetry Matrix)</option>
+                            <option value="quoteforge">LCC QuoteForge Pro (Financial Engine)</option>
+                            <option value="command">Freelance Command Center (State Storage)</option>
+                        </select>
+
+                        <button id="run-simulation-btn" class="sim-btn">Execute Production Diagnostics</button>
+
+                        <div class="terminal-container">
+                            <div class="terminal-header">
+                                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                                <span class="terminal-title">system_diagnostics.log</span>
+                            </div>
+                            <div id="portfolio-terminal" class="terminal-body">
+                                <div class="log-neutral">[SYSTEM] Ready to test internal asset logic components. Choose an architecture target above...</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FULL TECH STACK MATRIX -->
+                    <h2 class="section-divider">LCC Infrastructure Core Stack</h2>
+                    <div class="stack-box">
+                        <div class="stack-category">
+                            <h4>Runtime & Languages</h4>
+                            <p>JavaScript (ES6+ Engine Core), Node.js, Python, Express.js</p>
+                        </div>
+                        <div class="stack-category">
+                            <h4>Frontend Architecture</h4>
+                            <p>React.js Framework, Modular CSS3 Architecture, DOM Manipulation</p>
+                        </div>
+                        <div class="stack-category">
+                            <h4>Persistence & Cloud Pipelines</h4>
+                            <p>MongoDB Database Layer, LocalStorage Data Persistence, Git/GitHub Actions Engine</p>
+                        </div>
+                    </div>
+
+                    <!-- INTERACTIVE LIVE GATEWAY FORM -->
+                    <h2 class="section-divider">Secure Connection Gateway</h2>
+                    <div class="contact-box">
+                        <p class="form-intro">Initiate corporate inquiries or technical evaluations via secure async transmission:</p>
+                        
+                        <form id="gateway-form">
+                            <div class="input-field-group">
+                                <label for="sender-identity">Corporate Node / Email:</label>
+                                <input type="email" id="sender-identity" placeholder="manager@meta.com" required>
+                            </div>
+                            <div class="input-field-group">
+                                <label for="payload-body">Transmission Body / Message:</label>
+                                <textarea id="payload-body" rows="4" placeholder="Describe the engineering scope or role requirements..." required></textarea>
+                            </div>
+                            <button type="submit" id="submit-payload-btn" class="gateway-submit-btn">Dispatch Payload Data</button>
+                        </form>
+
+                        <!-- REACT-STYLE LIVE VIEW PORTAL -->
+                        <div class="payload-monitor">
+                            <div class="monitor-header">
+                                <span class="pulse-indicator"></span> LIVE STAGE STATE PREVIEW (JSON)
+                            </div>
+                            <pre id="json-preview">{\n  "sender": "",\n  "message": "",\n  "timestamp": null,\n  "status": "AWAITING_INPUT"\n}</pre>
+                        </div>
+                    </div>
+                </section>
+            </aside>
+            
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
