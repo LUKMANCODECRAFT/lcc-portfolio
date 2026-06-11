@@ -22,5 +22,6 @@ This portfolio functions as a live developer dashboard rather than a static land
 ```text
 lcc-portfolio/
 │
-└── index.html   # Unified workspace containing semantic layout, UX styles, and runtime engines
+└── index.html   # Unified workspace containing semantic layout, and UX styles
+└──app.js   #runtime engines
 © 2026 Lukman CodeCraft (LCC). Engineered for high-velocity software performance and technical transparency.
