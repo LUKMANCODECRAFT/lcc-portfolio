@@ -4,433 +4,190 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lukman CodeCraft | Enterprise Systems Engineer</title>
-    
-    <style>
-        /* ==========================================================================
-           GLOBAL VARIABLES & INDUSTRIAL SYSTEM RESET
-           ========================================================================== */
-        body {
-            background-color: #06070a !important;
-            color: #94a3b8 !important;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            margin: 0;
-            padding: 40px 20px;
-            line-height: 1.6;
-        }
-
-        .portfolio-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        /* ==========================================================================
-           EXECUTIVE HEADER STYLING
-           ========================================================================== */
-        .hero-section {
-            margin-bottom: 40px;
-            border-bottom: 1px solid #1e293b;
-            padding-bottom: 35px;
-        }
-
-        .status-badge {
-            display: inline-block;
-            background-color: #0b131f;
-            border: 1px solid #065f46;
-            color: #34d399;
-            font-family: monospace;
-            font-size: 0.75rem;
-            padding: 5px 12px;
-            border-radius: 4px;
-            letter-spacing: 0.5px;
-            margin-bottom: 15px;
-        }
-
-        h1 {
-            color: #f8fafc !important;
-            font-size: 2.5rem;
-            margin: 0 0 5px 0;
-            letter-spacing: -0.5px;
-        }
-
-        .role-title {
-            color: #3b82f6;
-            font-size: 1.15rem;
-            margin: 0 0 15px 0;
-            font-weight: 500;
-        }
-
-        .bio-text {
-            max-width: 800px;
-            font-size: 1.05rem;
-            color: #cbd5e1;
-            margin: 0;
-        }
-
-        /* ==========================================================================
-           DYNAMIC MULTI-COLUMN ENGINEERING LAYOUT
-           ========================================================================== */
-        .grid-layout {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 45px;
-            margin-bottom: 40px;
-        }
-
-        @media (max-width: 950px) {
-            .grid-layout {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-        }
-
-        .portfolio-section {
-            margin-bottom: 20px;
-        }
-
-        h2 {
-            color: #f8fafc;
-            font-size: 1.2rem;
-            margin-top: 0;
-            margin-bottom: 25px;
-            text-transform: uppercase;
-            letter-spacing: 0.75px;
-            border-left: 3px solid #3b82f6;
-            padding-left: 12px;
-        }
-
-        /* ==========================================================================
-           PRODUCTION CASE STUDY CARDS
-           ========================================================================== */
-        .project-card {
-            background-color: #0b0d14;
-            border: 1px solid #1e293b;
-            border-radius: 8px;
-            padding: 24px;
-            margin-bottom: 20px;
-        }
-
-        .project-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 15px;
-            margin-bottom: 12px;
-        }
-
-        .project-card h3 {
-            margin: 0;
-            font-size: 1.2rem;
-            color: #fff;
-        }
-
-        .tech-tag {
-            font-family: monospace;
-            font-size: 0.75rem;
-            background-color: #1e293b;
-            color: #cbd5e1;
-            padding: 4px 10px;
-            border-radius: 4px;
-            white-space: nowrap;
-        }
-
-        .project-card p {
-            margin: 0 0 20px 0;
-            font-size: 0.95rem;
-            color: #94a3b8;
-        }
-
-        .link-btn {
-            display: inline-block;
-            color: #3b82f6;
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-
-        .link-btn:hover {
-            color: #60a5fa;
-            text-decoration: underline;
-        }
-
-        /* ==========================================================================
-           VERIFIED CERTIFICATIONS MATRIX
-           ========================================================================== */
-        .certifications-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-        }
-
-        @media (max-width: 550px) {
-            .certifications-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .cert-card {
-            background-color: #0b0d14;
-            border: 1px solid #1e293b;
-            border-radius: 6px;
-            padding: 16px;
-            text-decoration: none;
-            transition: border-color 0.15s ease;
-        }
-
-        .cert-card:hover {
-            border-color: #3b82f6;
-        }
-
-        .cert-authority {
-            font-family: monospace;
-            font-size: 0.75rem;
-            color: #10b981;
-            margin-bottom: 6px;
-            font-weight: bold;
-        }
-
-        .cert-title {
-            color: #f8fafc;
-            font-size: 0.9rem;
-            font-weight: 500;
-            line-height: 1.4;
-        }
-
-        /* ==========================================================================
-           THE RUNTIME CENTRAL TABS NAVIGATION SYSTEM
-           ========================================================================== */
-        .tabs-header-container {
-            display: flex;
-            border-bottom: 1px solid #1e293b;
-            margin-bottom: 20px;
-            gap: 4px;
-        }
-
-        .control-tab-btn {
-            background-color: #0b0d14;
-            color: #64748b;
-            border: 1px solid #1e293b;
-            border-bottom: none;
-            padding: 12px 16px;
-            font-family: monospace;
-            font-size: 0.8rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            border-radius: 6px 6px 0 0;
-            cursor: pointer;
-            transition: all 0.15s ease;
-            position: relative;
-            top: 1px;
-        }
-
-        .control-tab-btn:hover {
-            color: #cbd5e1;
-            background-color: #111422;
-        }
-
-        .control-tab-btn.active-view-node {
-            color: #3b82f6;
-            background-color: #0b0d14;
-            border-color: #1e293b #1e293b #0b0d14 #1e293b;
-            border-top: 2px solid #3b82f6;
-        }
-
-        .tab-panel-content {
-            display: none; /* Hide content areas by default state */
-        }
-
-        .tab-panel-content.active-view-node {
-            display: block; /* Reveal target content area cleanly */
-        }
-
-        /* ==========================================================================
-           COMPACT WIDGET ELEMENTS INTERNALS
-           ========================================================================== */
-        .panel-box, .contact-box, .review-box {
-            background-color: #0b0d14;
-            border: 1px solid #1e293b;
-            border-radius: 0 0 8px 8px;
-            padding: 24px;
-            border-top: none; /* Merges cleanly into tab headers navigation */
-        }
-
-        select {
-            width: 100%;
-            padding: 12px;
-            background-color: #06070a;
-            border: 1px solid #1e293b;
-            border-radius: 6px;
-            color: #fff;
-            font-size: 0.95rem;
-            margin-top: 8px;
-            margin-bottom: 15px;
-        }
-
-        .sim-btn {
-            width: 100%;
-            background-color: #2563eb;
-            color: #fff;
-            border: none;
-            padding: 12px;
-            font-weight: 600;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 0.95rem;
-        }
-
-        .terminal-container {
-            margin-top: 20px;
-            background-color: #030406;
-            border: 1px solid #1e293b;
-            border-radius: 6px;
-            overflow: hidden;
-        }
-
-        .terminal-header {
-            background-color: #090a0f;
-            padding: 10px 15px;
-            display: flex;
-            align-items: center;
-            border-bottom: 1px solid #1e293b;
-        }
-
-        .terminal-header .dot {
-            width: 8px;
-            height: 8px;
-            background-color: #334155;
-            border-radius: 50%;
-            margin-right: 6px;
-        }
-
-        .terminal-title { font-family: monospace; font-size: 0.75rem; color: #64748b; margin-left: auto; }
-        .terminal-body { padding: 15px; height: 180px; overflow-y: auto; font-family: 'Courier New', Courier, monospace; font-size: 0.85rem; line-height: 1.5; }
-
-        .log-neutral { color: #64748b; }
-        .log-process { color: #3b82f6; }
-        .log-success { color: #10b981; }
-
-        /* INPUT SETTINGS FOR SYSTEM APPS */
-        .form-intro { font-size: 0.9rem; color: #94a3b8; margin: 0 0 20px 0; }
-        .input-field-group { margin-bottom: 16px; }
-        .input-field-group label { display: block; font-family: monospace; font-size: 0.75rem; color: #64748b; text-transform: uppercase; margin-bottom: 6px; }
-        
-        .input-field-group input, 
-        .input-field-group textarea,
-        .review-input-group input,
-        .review-input-group textarea {
-            width: 100%;
-            padding: 12px;
-            background-color: #06070a;
-            border: 1px solid #1e293b;
-            border-radius: 6px;
-            color: #fff;
-            box-sizing: border-box;
-            font-size: 0.9rem;
-        }
-
-        .gateway-submit-btn, .review-submit-btn {
-            width: 100%; background-color: #10b981; color: #06070a; border: none; padding: 12px;
-            font-weight: 700; font-family: monospace; text-transform: uppercase; border-radius: 6px; cursor: pointer;
-        }
-        .review-submit-btn { background-color: #3b82f6; color: #fff; }
-
-        .payload-monitor { margin-top: 20px; background-color: #030406; border: 1px solid #1e293b; border-radius: 6px; padding: 12px; }
-        .monitor-header { font-family: monospace; font-size: 0.7rem; color: #64748b; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #1e293b; padding-bottom: 8px; margin-bottom: 8px; }
-        .pulse-indicator { width: 6px; height: 6px; background-color: #3b82f6; border-radius: 50%; display: inline-block; }
-        #json-preview { margin: 0; font-family: 'Courier New', Courier, monospace; font-size: 0.8rem; color: #a7f3d0; white-space: pre-wrap; line-height: 1.4; }
-        
-        /* REVIEWS RESTRUCTURING */
-        .star-rating-container { display: flex; gap: 8px; font-size: 1.75rem; margin-bottom: 15px; cursor: pointer; }
-        .star-node { color: #1e293b; transition: color 0.15s ease; }
-        .star-node.hovered, .star-node.active { color: #f59e0b; text-shadow: 0 0 8px rgba(245, 158, 11, 0.3); }
-        .active-log-display { margin-top: 15px; padding: 12px; background-color: #030406; border: 1px solid #1e293b; border-radius: 6px; font-family: monospace; font-size: 0.8rem; }
-        .review-card-output { border-left: 2px solid #f59e0b; padding-left: 8px; }
-        .review-meta { color: #f8fafc; font-weight: bold; margin-bottom: 4px; }
-        .review-stars { color: #f59e0b; margin-bottom: 4px; }
-        .review-body { color: #94a3b8; }
-
-        /* ==========================================================================
-           WIDE HORIZONTAL TECH STACK GRID FOOTER
-           ========================================================================== */
-        .footer-stack-section {
-            border-top: 1px solid #1e293b;
-            padding-top: 35px;
-            margin-top: 20px;
-        }
-
-        .stack-horizontal-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        @media (max-width: 750px) {
-            .stack-horizontal-grid { grid-template-columns: 1fr; }
-        }
-
-        .stack-box {
-            background-color: #0b0d14;
-            border: 1px solid #1e293b;
-            border-radius: 8px;
-            padding: 20px;
-        }
-
-        .stack-box h4 { margin: 0 0 6px 0; color: #f8fafc; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px; }
-        .stack-box p { margin: 0; font-size: 0.85rem; color: #94a3b8; font-family: monospace; }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+    <!-- STICKY EXECUTIVE NAVIGATION BAR -->
+    <header class="navbar-sticky">
+        <div class="nav-container">
+            <a href="#" class="nav-brand">
+                <div class="brand-icon">⚡</div>
+                <div>
+                    <div class="brand-title">Lukman.dev</div>
+                    <div class="brand-sub">Enterprise Systems Architect</div>
+                </div>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="#projects" class="nav-link">Production Assets</a>
+                <a href="#skills" class="nav-link">Skill Matrix</a>
+                <a href="#certs" class="nav-link">Certifications</a>
+                <a href="#lab" class="nav-link">Diagnostics Lab</a>
+            </nav>
+
+            <div class="nav-telemetry">
+                <div class="telemetry-chip">
+                    <span class="status-dot-pulse"></span>
+                    <span>PING: <span id="telemetry-ping" style="color:var(--success-mint); font-weight:bold;">14ms</span></span>
+                </div>
+                <button id="command-palette-trigger" class="palette-btn">⌨️ Command Launcher (Ctrl+K)</button>
+            </div>
+        </div>
+    </header>
+
     <div class="portfolio-container">
-        <header class="hero-section">
-            <div class="status-badge">● COMPILER ONLINE // ASSIGNED TO ACTIVE PRODUCTION</div>
-            <h1>Lukman CodeCraft</h1>
-            <p class="role-title">Principal Automation Engineer & Systems Architect</p>
-            <p class="bio-text">
-                I engineer data-persistent web infrastructure, asynchronous network telemetry software, and automated business tools designed to protect revenue margins and scale operational efficiency.
-            </p>
-        </header>
+        
+        <!-- HERO SECTION REDESIGN WITH GLASSMORPHISM & METRICS -->
+        <section class="hero-card">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="status-badge">
+                        <span class="status-dot-pulse"></span> COMPILER ONLINE // ACTIVE PRODUCTION SYSTEM
+                    </div>
+                    <h1>Lukman CodeCraft</h1>
+                    <p class="role-title">Principal Automation Engineer & Systems Architect</p>
+                    <p class="bio-text">
+                        I engineer data-persistent web infrastructure, asynchronous network telemetry software, and automated business tools designed to protect revenue margins and scale operational efficiency.
+                    </p>
+                    <div class="hero-tags">
+                        <span class="hero-tag">⚡ Asynchronous Systems</span>
+                        <span class="hero-tag">🛡️ Network Telemetry</span>
+                        <span class="hero-tag">💾 Persistent LocalStorage</span>
+                        <span class="hero-tag">📊 Revenue Scoping Math</span>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div id="stat-latency" class="stat-num">99.9%</div>
+                        <div class="stat-label">Telemetry Latency Accuracy</div>
+                    </div>
+                    <div class="stat-box">
+                        <div id="stat-margin" class="stat-num">100%</div>
+                        <div class="stat-label">Margin Leakage Secured</div>
+                    </div>
+                    <div class="stat-box">
+                        <div id="stat-uptime" class="stat-num">00:00</div>
+                        <div class="stat-label">Live Session Uptime</div>
+                    </div>
+                    <div class="stat-box">
+                        <div id="stat-certs" class="stat-num">4</div>
+                        <div class="stat-label">Verified Certifications</div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <div class="grid-layout">
             
             <main class="left-column">
-                <section class="portfolio-section">
+                
+                <!-- PRODUCTION ASSETS SECTION -->
+                <section id="projects" class="portfolio-section animate-fade-in">
                     <h2>Deployed Production Assets</h2>
 
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3>🛰️ LCC Performance Shield</h3>
-                            <span class="tech-tag">Asynchronous JS</span>
+                    <!-- PROJECT SEARCH AND FILTER CONTROLS -->
+                    <div class="projects-controls">
+                        <div class="search-input-wrapper">
+                            <input type="text" id="project-search-input" placeholder="🔍 Search production assets by keyword, technology, or spec...">
                         </div>
-                        <p>An enterprise-grade telemetry dashboard running automated background network polling loops against live production APIs, tracking latency metrics down to the millisecond while bypassing browser caching layers.</p>
-                        <div class="project-actions">
-                            <a href="https://github.com/lukmancodecraft/lcc-performance-shield" target="_blank" class="link-btn">Source Code & Document Matrix →</a>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3>🚀 Freelance Command Center</h3>
-                            <span class="tech-tag">React Engine</span>
-                        </div>
-                        <p>A global business management and lead qualification matrix built with data-persistent LocalStorage state architecture, multi-currency valuation layers, and automated client scoring models.</p>
-                        <div class="project-actions">
-                            <a href="https://github.com/lukmancodecraft/freelance-dashboard" target="_blank" class="link-btn">Source Code & Document Matrix →</a>
+                        <div class="filter-tags-container" id="filter-tags">
+                            <span class="filter-tag-pill active" data-filter="all">All Assets</span>
+                            <span class="filter-tag-pill" data-filter="Asynchronous JS">Asynchronous JS</span>
+                            <span class="filter-tag-pill" data-filter="React Engine">React Engine</span>
+                            <span class="filter-tag-pill" data-filter="Modular CSS3">Modular CSS3</span>
                         </div>
                     </div>
 
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3>🛠️ LCC QuoteForge Pro</h3>
-                            <span class="tech-tag">Modular CSS3</span>
+                    <div id="projects-list-container">
+                        <div class="project-card" data-id="shield" data-category="Asynchronous JS" data-tags="Asynchronous JS telemetry ping automated polling">
+                            <div class="project-header">
+                                <h3>🛰️ LCC Performance Shield</h3>
+                                <span class="tech-tag">Asynchronous JS</span>
+                            </div>
+                            <p>An enterprise-grade telemetry dashboard running automated background network polling loops against live production APIs, tracking latency metrics down to the millisecond while bypassing browser caching layers.</p>
+                            <div class="project-actions">
+                                <a href="https://github.com/lukmancodecraft/lcc-performance-shield" target="_blank" class="link-btn">Source Code & Document Matrix →</a>
+                                <button class="details-btn" data-project="shield">Explore Architecture 🔍</button>
+                            </div>
                         </div>
-                        <p>A professional client scoping application utilizing inverse-percentage math models to calculate project budgets and auto-generate clean contract proposals while securing freelance profit margins.</p>
-                        <div class="project-actions">
-                            <a href="https://github.com/lukmancodecraft/lcc-quoteforge" target="_blank" class="link-btn">Source Code & Document Matrix →</a>
+
+                        <div class="project-card" data-id="command" data-category="React Engine" data-tags="React Engine localstorage financial command matrix">
+                            <div class="project-header">
+                                <h3>🚀 Freelance Command Center</h3>
+                                <span class="tech-tag">React Engine</span>
+                            </div>
+                            <p>A global business management and lead qualification matrix built with data-persistent LocalStorage state architecture, multi-currency valuation layers, and automated client scoring models.</p>
+                            <div class="project-actions">
+                                <a href="https://github.com/lukmancodecraft/freelance-dashboard" target="_blank" class="link-btn">Source Code & Document Matrix →</a>
+                                <button class="details-btn" data-project="command">Explore Architecture 🔍</button>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-id="quoteforge" data-category="Modular CSS3" data-tags="Modular CSS3 quote reverse percentage math financial">
+                            <div class="project-header">
+                                <h3>🛠️ LCC QuoteForge Pro</h3>
+                                <span class="tech-tag">Modular CSS3</span>
+                            </div>
+                            <p>A professional client scoping application utilizing inverse-percentage math models to calculate project budgets and auto-generate clean contract proposals while securing freelance profit margins.</p>
+                            <div class="project-actions">
+                                <a href="https://github.com/lukmancodecraft/lcc-quoteforge" target="_blank" class="link-btn">Source Code & Document Matrix →</a>
+                                <button class="details-btn" data-project="quoteforge">Explore Architecture 🔍</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="no-projects-found" class="no-projects-msg">
+                        [SYSTEM] No production assets match the selected filter criteria.
+                    </div>
+                </section>
+
+                <!-- ANIMATED SKILLS PROFICIENCY MATRIX -->
+                <section id="skills" class="portfolio-section">
+                    <h2>Core Technical Proficiency Matrix</h2>
+                    <div class="skills-matrix-card">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Asynchronous Telemetry & JS ES6+</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" data-target-width="95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Modular CSS3 Architecture & Layouts</span>
+                                <span>92%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" data-target-width="92%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>React.js Engine & LocalStorage State</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" data-target-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Python Scientific Automation</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" data-target-width="88%"></div>
+                            </div>
                         </div>
                     </div>
                 </section>
 
-                <section class="portfolio-section">
+                <!-- VERIFIED CERTIFICATIONS SECTION -->
+                <section id="certs" class="portfolio-section">
                     <h2>Verified Engineering Certifications</h2>
                     <div class="certifications-grid">
                         <a href="https://www.freecodecamp.org/certification/lukmancodecraft/javascript-v9" target="_blank" class="cert-card">
@@ -453,13 +210,16 @@
                 </section>
             </main>
 
-            <aside class="right-column">
+            <!-- RIGHT COLUMN CONTROL TABS CONTAINER -->
+            <aside id="lab" class="right-column">
                 <div class="tabs-header-container">
                     <button class="control-tab-btn active-view-node" data-target="panel-lab">⚡ Diagnostics Lab</button>
+                    <button class="control-tab-btn" data-target="panel-estimator">📊 QuoteForge Tool</button>
                     <button class="control-tab-btn" data-target="panel-gateway">📧 Secure Gateway</button>
-                    <button class="control-tab-btn" data-target="panel-reviews">🌟 Client Evaluations</button>
+                    <button class="control-tab-btn" data-target="panel-reviews">🌟 Evaluations</button>
                 </div>
 
+                <!-- DIAGNOSTICS LAB TAB -->
                 <div id="panel-lab" class="tab-panel-content active-view-node">
                     <div class="panel-box">
                         <label for="simulation-selector">Select Software Asset to Query:</label>
@@ -469,18 +229,75 @@
                             <option value="command">Freelance Command Center (State Storage)</option>
                         </select>
                         <button id="run-simulation-btn" class="sim-btn">Execute Production Diagnostics</button>
+                        
                         <div class="terminal-container">
                             <div class="terminal-header">
                                 <span class="dot"></span><span class="dot"></span><span class="dot"></span>
                                 <span class="terminal-title">system_diagnostics.log</span>
                             </div>
                             <div id="portfolio-terminal" class="terminal-body">
-                                <div class="log-neutral">[SYSTEM] Ready to test internal asset logic components...</div>
+                                <div class="log-neutral">[SYSTEM] Diagnostic CLI v2.4 initialized. Type 'help' or select preset.</div>
+                            </div>
+                            <form id="terminal-cli-form" class="terminal-cli-form">
+                                <span class="cli-prompt-symbol">lcc@terminal:~$</span>
+                                <input type="text" id="cli-input-field" class="cli-input" placeholder="Type CLI command (e.g., help, status, ping, quote 40)..." autocomplete="off">
+                            </form>
+                        </div>
+                        <div class="cli-quick-chips">
+                            <span class="cli-chip" data-cmd="help">help</span>
+                            <span class="cli-chip" data-cmd="status">status</span>
+                            <span class="cli-chip" data-cmd="ping">ping</span>
+                            <span class="cli-chip" data-cmd="skills">skills</span>
+                            <span class="cli-chip" data-cmd="projects">projects</span>
+                            <span class="cli-chip" data-cmd="clear">clear</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LCC QUOTEFORGE ESTIMATOR TAB -->
+                <div id="panel-estimator" class="tab-panel-content">
+                    <div class="estimator-box">
+                        <p class="form-intro">Interactive Client Scoping & Budget Estimator Engine:</p>
+                        <div class="estimator-grid">
+                            <div>
+                                <label for="est-scope">Engineering Scope:</label>
+                                <select id="est-scope">
+                                    <option value="small">Small (Telemetry Tool / Widget)</option>
+                                    <option value="medium" selected>Medium (Full Web App / Dashboard)</option>
+                                    <option value="large">Large (Enterprise System Architecture)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="est-hours">Estimated Hours:</label>
+                                <select id="est-hours">
+                                    <option value="20">20 Engineering Hours</option>
+                                    <option value="40" selected>40 Engineering Hours</option>
+                                    <option value="80">80 Engineering Hours</option>
+                                    <option value="120">120+ Engineering Hours</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input-field-group">
+                            <label for="est-rate">Hourly Rate Coefficient ($):</label>
+                            <input type="number" id="est-rate" value="75" min="30" max="250">
+                        </div>
+                        <div class="input-field-group">
+                            <label for="est-margin">Profit Reserve Margin (%):</label>
+                            <input type="number" id="est-margin" value="15" min="0" max="50">
+                        </div>
+
+                        <div class="estimator-output-card">
+                            <div class="estimator-output-title">Secured Total Proposal Estimate</div>
+                            <div id="est-total-display" class="estimator-amount">$3,450.00 USD</div>
+                            <div id="est-specs-display" class="estimator-specs">
+                                Base Labor: $3,000.00 | Reserve Margin: $450.00 (15%)<br>
+                                Includes data-persistence layer, unit tests, and telemetry audit.
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- SECURE GATEWAY TAB -->
                 <div id="panel-gateway" class="tab-panel-content">
                     <div class="contact-box">
                         <p class="form-intro">Initiate corporate inquiries or technical evaluations via secure async transmission:</p>
@@ -502,6 +319,7 @@
                     </div>
                 </div>
 
+                <!-- EVALUATIONS TAB -->
                 <div id="panel-reviews" class="tab-panel-content">
                     <div class="review-box">
                         <p class="form-intro">Leave a verified telemetry rating based on production execution metrics:</p>
@@ -517,8 +335,12 @@
                             <textarea id="review-text" rows="2" placeholder="Leave public feedback optimization notes..."></textarea>
                             <button id="submit-review-btn" class="review-submit-btn">Commit Review to Cache</button>
                         </div>
+                        <div class="reviews-filter-bar">
+                            <span>CACHED EVALUATION LOGS</span>
+                            <button id="clear-reviews-btn" class="clear-reviews-btn">Clear Cache</button>
+                        </div>
                         <div id="active-review-log" class="active-log-display">
-                            <div class="log-neutral">[CACHE] No local evaluation records found in browser state.</div>
+                            <div class="log-neutral">[CACHE] Loading evaluation records...</div>
                         </div>
                     </div>
                 </div>
@@ -543,6 +365,64 @@
             </div>
         </footer>
     </div>
-<script src="app.js"></script>
+
+    <!-- MODAL OVERLAY: PROJECT ARCHITECTURE DEEP DIVE -->
+    <div id="project-modal" class="modal-backdrop">
+        <div class="modal-container">
+            <button id="modal-close-btn" class="modal-close-btn">✕</button>
+            <h2 id="modal-project-title" class="modal-title">Project Title</h2>
+            <span id="modal-project-tag" class="modal-tag">Tag</span>
+            
+            <div class="modal-section-heading">SYSTEM OVERVIEW</div>
+            <p id="modal-project-desc" class="modal-text">Description</p>
+            
+            <div class="modal-section-heading">TECHNICAL SPECIFICATIONS & METRICS</div>
+            <p id="modal-project-specs" class="modal-text">Specs</p>
+
+            <div class="modal-section-heading">SAMPLE ARCHITECTURE SNIPPET</div>
+            <div id="modal-project-code" class="code-snippet-box">Code snippet</div>
+
+            <div style="margin-top: 22px;">
+                <a id="modal-project-link" href="#" target="_blank" class="link-btn">View External Source Repository →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL OVERLAY: COMMAND PALETTE (CTRL+K) -->
+    <div id="palette-modal" class="modal-backdrop">
+        <div class="modal-container" style="max-width: 550px;">
+            <button id="palette-close-btn" class="modal-close-btn">✕</button>
+            <h3 class="modal-title" style="font-size: 1.1rem; font-family: monospace;">⌨️ System Command Launcher</h3>
+            <input type="text" id="palette-search-input" class="command-palette-input" placeholder="Type a command or shortcut..." autocomplete="off">
+            <div id="palette-items-list" class="command-palette-list">
+                <div class="command-palette-item" data-action="tab-lab">
+                    <span>⚡ Switch to Diagnostics Lab</span>
+                    <span class="command-key">Tab 1</span>
+                </div>
+                <div class="command-palette-item" data-action="tab-estimator">
+                    <span>📊 Switch to QuoteForge Calculator</span>
+                    <span class="command-key">Tab 2</span>
+                </div>
+                <div class="command-palette-item" data-action="tab-gateway">
+                    <span>📧 Switch to Secure Gateway</span>
+                    <span class="command-key">Tab 3</span>
+                </div>
+                <div class="command-palette-item" data-action="tab-reviews">
+                    <span>🌟 Switch to Evaluations Log</span>
+                    <span class="command-key">Tab 4</span>
+                </div>
+                <div class="command-palette-item" data-action="cmd-ping">
+                    <span>🛰️ Run Production Ping Check</span>
+                    <span class="command-key">CLI</span>
+                </div>
+                <div class="command-palette-item" data-action="focus-search">
+                    <span>🔍 Focus Project Search Bar</span>
+                    <span class="command-key">Ctrl+/</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
 </body>
 </html>
